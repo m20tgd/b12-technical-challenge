@@ -1,7 +1,10 @@
 import json
+import os
 
 
 print("Hello, World!")
+
+GITHUB_RUN_ID = os.getenv("GITHUB_RUN_ID")
 
 body = {
     "name": "Tom Digby",
