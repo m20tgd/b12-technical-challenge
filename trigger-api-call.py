@@ -4,9 +4,9 @@ import os
 
 print("Hello, World!")
 
-ACTION_RUN_URL = os.getenv("ACTION_RUN_URL")
+ACTION_RUN_URL = os.getenv("ACTION_RUN_URL").strip()
 TEST = os.getenv("TEST")
-print(TEST)
+print(TEST == "This is a test")
 
 body = {
     "name": "Tom Digby",
