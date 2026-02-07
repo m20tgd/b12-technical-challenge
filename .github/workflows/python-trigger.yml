@@ -12,3 +12,9 @@ jobs:
         with:
           python-version: "3.11"
       - run: python trigger-api-call.py
+        env:
+          ACTION_RUN_URL: >
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TEST: ${{ secrets.TEST }}
+      
+    
