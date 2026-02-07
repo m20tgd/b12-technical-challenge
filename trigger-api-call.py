@@ -31,7 +31,7 @@ hex_digest = hmac.new(SIGNING_SECRET.encode(),
                       payload, hashlib.sha256).hexdigest()
 headers = {
     "Content-Type": "application/json",
-    " X-Signature-256": f"sha256={hex_digest}",
+    "X-Signature-256": f"sha256={hex_digest}",
 }
 
 # Send request
